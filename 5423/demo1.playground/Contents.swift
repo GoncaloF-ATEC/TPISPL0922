@@ -104,5 +104,53 @@ switch(teste){
 
 // loops
 
+// for each
+
+/*
+ 
+ se num par e num % 10 = 0  -> print "o res = num"
+ 
+ se num par e num % 10 != 0 -> print "o res = num", "func complexa"
+ */
+
+for i in 0...100 where i % 2 == 0{
+   
+    print(i)
+
+    if i % 10 == 0{
+        if true{
+            continue
+        }
+    }
+   
+    print("teste")
+    
+    if i == 82{
+        break
+    }
+}
+
+
+//while
+
+var condwile = 10
+
+
+while condwile > 0{
+    
+    print(condwile)
+    condwile -= 1
+}
+
+//do while
+print("------------------------------------------")
+condwile = 10
+repeat{
+    
+    print(condwile)
+    condwile -= 1
+    
+}while(condwile > 0)
+
 
 //Funções
