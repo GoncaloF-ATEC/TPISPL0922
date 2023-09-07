@@ -55,6 +55,7 @@ teste = 40
 
 
 // condições
+print("--------------------condições----------------------")
 
 //if else
 
@@ -103,6 +104,7 @@ switch(teste){
 
 
 // loops
+print("--------------------loops----------------------")
 
 // for each
 
@@ -131,6 +133,10 @@ for i in 0...100 where i % 2 == 0{
 }
 
 
+for _ in 0...100{
+    print("ok")
+}
+
 //while
 
 var condwile = 10
@@ -154,3 +160,73 @@ repeat{
 
 
 //Funções
+print("------------------Funções------------------------")
+
+func func1(){
+    
+    print("Ola Mundo")
+    
+}
+
+func1()
+
+
+func func2(nome:String){
+    
+    print("Ola Mundo, \(nome)")
+    
+}
+
+func2(nome: "Gonçalo")
+
+
+
+
+func func3(nome:String, ano:Int){
+    
+    print("Ola Mundo, \(nome) em \(ano)")
+    
+}
+
+func3(nome: "Gonçalo", ano: 2023)
+
+
+
+func soma(valor1 num1:Int,valor2 num2:Int){
+    
+    print(num1 + num2)
+}
+
+soma(valor1: 10, valor2: 20)
+
+
+func divide(_ num1:Int, por num2:Int){
+    
+    print(num1 / num2)
+    
+}
+
+//divide(num1:10, num1: 5)
+divide(10, por: 5)
+
+
+
+
+func soma(_ num1:Int,com num2:Int) -> Int{
+    num1 + num2
+}
+
+
+print(soma(20, com: 10))
+
+
+
+
+func func4(nome:String, ano:Int = 2023){
+    
+    print("Ola Mundo, \(nome) em \(ano)")
+    
+}
+
+func4(nome: "Gonçalo")
+func4(nome: "Gonçalo F", ano: 2000)
