@@ -140,11 +140,67 @@ arr1.forEach { elm in
     
     print(elm)
 }
+print("----------------")
 
 
+var numRA = arr1.remove(at: 1)
+print(numRA)
 // set
+print("---------------------------Set---------------------------")
+
+var  set1:Set = [1, 2, 3, 4]
+
+print(set1.insert(30))
+print(set1.insert(30))
+
+print(set1.contains(11))
 
 
 
-// dicionairios
+for elm in set1{
+    print(elm)
+}
+
+print("----------------")
+
+set1.forEach { elm in
+    
+    print(elm)
+}
+print("----------------")
+print("----------------")
+print("----------------")
+var set2:Set = ["Ovos", "Farinha", "Acucar", "Leite", "Iogurte", "Oleo"]
+
+var set3:Set = ["Polvilho", "Ovos", "Leite", "Oleo", "Queijo", "Sal"]
+
+
+print(set2.union(set3))
+print("----------------")
+print(set2.subtracting(set3))
+print(set3.subtracting(set2))
+print("----------------")
+
+
+print(set2.intersection(set3))
+print("----------------")
+      
+print(set2.symmetricDifference(set3))
+      
+      
+print("----------------")
+print("----------------")
+print("----------------")
+
+print(set1)
+
+var numR = set1.remove(133)
+
+print(numR!)
+
+print(set1)
+
+
+// dicionarios
+
 
