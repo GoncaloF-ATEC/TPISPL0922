@@ -196,11 +196,47 @@ print(set1)
 
 var numR = set1.remove(133)
 
-print(numR!)
+
 
 print(set1)
 
 
 // dicionarios
+var dict1 = ["nome":"Gonçalo", "escola": "ATEC", "key":"valor A", "key2":"valor", "key3":"valor B"]
 
+print(dict1["nome"]!)
+
+
+print(dict1)
+
+
+/*
+ 
+ ["escola": "ATEC", "nome": "Gonçalo", "key3": "valor B", "key": "valor A", "key2": "valor"]
+ ["nome": "Gonçalo", "key": "valor A", "escola": "ATEC", "key3": "valor B", "key2": "valor"]
+ 
+ ["nome": "Gonçalo", "key": "valor A", "escola": "ATEC", "key3": "valor B", "key2": "valor"]
+ */
+
+
+dict1["novaKey"] = "Novo Valor"
+
+print(dict1)
+
+dict1["novaKey"] = nil
+
+print(dict1)
+
+
+print(dict1.count)
+print(dict1.capacity)
+
+print("----------------")
+print("----------------")
+
+for d in dict1.values{
+    
+    print(d)
+    
+}
 
