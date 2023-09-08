@@ -230,3 +230,17 @@ func func4(nome:String, ano:Int = 2023){
 
 func4(nome: "Gonçalo")
 func4(nome: "Gonçalo F", ano: 2000)
+
+
+
+
+
+var tup = ("Gonçalo", 2023)
+
+print(tup.1)
+
+
+var tup2 = (nome:"Gonçalo", ano:2023)
+
+print(tup2.0)
+print(tup2.nome)
