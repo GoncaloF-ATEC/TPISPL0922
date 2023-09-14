@@ -101,4 +101,17 @@ print(q.lado)
 print(q.area)
 
 print(q.perimetro)
+
+
+//willSet e didSet
+print("-----------------------")
+
+al2.notas.append(10)
+al2.notas.append(10)
+al2.notas.append(10)
+al2.notas.append(10)
+al2.notas.append(0)
+
+print("-----------------------")
+
 //protocolos

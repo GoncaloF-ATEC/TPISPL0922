@@ -40,6 +40,40 @@ class Aluno:Pessoa{
     
     var turma: String
     
+    var aprovado = false
+    
+    var notas:[Int] = []{
+        
+        didSet{
+            print("a ultima nota passou de \(oldValue.last) para \(notas.last!)")
+            
+            
+            if notas.count == 5 {
+                
+                var total = 0
+                for n in notas{
+                    total += n
+                }
+                
+                var media = total/5
+                
+                if media >= 10 {
+                    aprovado = true
+                    print("Aluno aprovado")
+                }
+            }
+            
+            
+            
+        }
+        
+        willSet{
+            print("vai ser adicionada a nota \(newValue.last!)")
+            
+        }
+        
+    }
+    
     
     init(nome: String, idade: Int = 0, morada: Morada? = nil, turma: String) {
         self.turma = turma
@@ -50,8 +84,6 @@ class Aluno:Pessoa{
     override func copy() -> Aluno {
         Aluno(nome: nome, idade: idade, morada: morada, turma: turma)
     }
-    
-    
     
     
 }
@@ -96,3 +128,6 @@ class Quadrado{
     
     
 }
+
+
+
