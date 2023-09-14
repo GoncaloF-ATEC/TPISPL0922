@@ -62,10 +62,43 @@ print(m2.rua)
 m.teste()
 
 
+print("--------------herança---------")
+
 //herança
 
+var al = Aluno(nome: "Xico", turma: "sem turma")
 
-//protocolos
+print(al)
 
+var al2 = al.copy()
+
+print(al2.turma)
+
+
+print("--------------propriedades---------")
 
 //propriedades
+
+var q = Quadrado(lado: 4)
+
+
+
+print(q.lado)
+
+print(q.area)
+
+q.area = 25
+
+print(q.lado)
+
+print(q.area)
+
+
+q.perimetro = 10
+
+print(q.lado)
+
+print(q.area)
+
+print(q.perimetro)
+//protocolos
