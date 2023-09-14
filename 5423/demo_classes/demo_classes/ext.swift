@@ -13,10 +13,8 @@ extension Array<Int>{
     
     var avg:Float{
         
-      
-        var soma = self.reduce(0) { i, j in
-            i + j
-        }
+        
+        let soma = self.reduce(0) { $0 + $1 }
         
     
         /*
