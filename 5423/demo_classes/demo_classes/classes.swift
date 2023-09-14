@@ -49,15 +49,8 @@ class Aluno:Pessoa{
             
             
             if notas.count == 5 {
-                
-                var total = 0
-                for n in notas{
-                    total += n
-                }
-                
-                var media = total/5
-                
-                if media >= 10 {
+    
+                if notas.avg >= 10 {
                     aprovado = true
                     print("Aluno aprovado")
                 }
@@ -128,6 +121,7 @@ class Quadrado{
     
     
 }
+
 
 
 

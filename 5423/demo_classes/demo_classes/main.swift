@@ -114,4 +114,7 @@ al2.notas.append(0)
 
 print("-----------------------")
 
-//protocolos
+//ext
+
+
+print([10, 10, 5 ,5].avg)
