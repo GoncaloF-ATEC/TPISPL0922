@@ -7,5 +7,24 @@
 
 import Foundation
 
-print("Hello, World!")
 
+
+//animal
+
+var a = Animal()
+
+// cao
+
+var c = Cao(raca: "Poodle")
+
+
+//planta
+
+var p = Planta()
+
+//flor
+
+var f = Flor()
+
+
+var lista:[SerVivo] = [ c, f]
