@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-   @State var nome = "Gonçalo"
+    @State var nome = "Gonçalo"
+    @State var nomeTF = ""
     
     var body: some View {
         
-        VStack(alignment:.leading){
+        VStack(){
             
             Text("Ola Mundo")
                 .background(.pink)
@@ -24,22 +25,26 @@ struct ContentView: View {
                 .clipShape(Capsule())
             
             Spacer()
-            
+
             Text(nome)
                 .padding(.bottom, 20)
-       
+    
             
+            Spacer()
+                .frame(height:25)
+  
+            TextField("Nome:", text: self.$nomeTF)
+                .frame(width: 200)
+                .textFieldStyle(.roundedBorder)
+            
+            Spacer()
+                .frame(height:25)
   
             Button {
-                self.nome = "Novo novo"
+                self.nome = self.nomeTF
+                self.nomeTF = ""
             } label: {
-                Text("OK")
-                    .frame(width: 100, height: 100, alignment: .bottomLeading)
-                    .padding(20)
-                    .background(.black)
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .fontWeight(.heavy)
+              btnLblView(btnTxt: "OK2")
             }
             
             
