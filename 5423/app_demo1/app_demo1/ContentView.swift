@@ -23,6 +23,13 @@ struct ContentView: View {
                 .foregroundColor(Color.white)
                 .fontWeight(.bold)
                 .clipShape(Capsule())
+                .onTapGesture(count: 2) {
+                    print("2 taps")
+                }
+                .onTapGesture(count: 1) {
+                    print("1 taps")
+                }
+               
             
             Spacer()
 
@@ -36,24 +43,26 @@ struct ContentView: View {
             TextField("Nome:", text: self.$nomeTF)
                 .frame(width: 200)
                 .textFieldStyle(.roundedBorder)
+                .onTapGesture {
+                    self.nomeTF = .emptyString
+                }
             
             Spacer()
                 .frame(height:25)
   
             Button {
                 self.nome = self.nomeTF
-                self.nomeTF = ""
             } label: {
               btnLblView(btnTxt: "OK2")
             }
             
-            
             Spacer()
+     
             
-            
-            
+        } // main VStack
+        .onChange(of: self.nome) { newValue in
+            self.nomeTF = .emptyString
         }
-        
     }
          
 }
