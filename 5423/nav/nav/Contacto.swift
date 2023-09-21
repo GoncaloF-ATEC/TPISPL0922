@@ -8,7 +8,10 @@
 import Foundation
 
 
-class Contacto{
+class Contacto:Identifiable{
+    
+    var id = UUID()
+    
     var nome: String
     private var _fotoName: String?
     var email: String
@@ -21,7 +24,7 @@ class Contacto{
     
     
     
-    init(nome: String, fotoName: String? = nil, email: String) {
+    init(nome: String, fotoName: String? = nil, email: String = "") {
         self.nome = nome
         self._fotoName = fotoName
         self.email = email

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct newView: View {
-    var nome: String
-    var foto: String
+   
+    var contacto: Contacto
     
     
     var body: some View {
@@ -17,14 +17,14 @@ struct newView: View {
         VStack{
 
             
-            Image(foto)
+            Image(contacto.fotoName)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 200, height: 200)
                 .clipShape(Circle())
                 .padding(.top, 20)
 
-            Text(nome)
+            Text(contacto.nome)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .fontWeight(.bold)
                 .padding(.top,20)
@@ -37,7 +37,7 @@ struct newView: View {
             }
 
         }
-        .navigationTitle("infos d@ \(nome)")
+        .navigationTitle("infos d@ \(contacto.nome)")
         
         
         
@@ -46,5 +46,5 @@ struct newView: View {
 }
 
 #Preview {
-    newView(nome: "Joana", foto: "foto1")
+    newView(contacto: Contacto(nome: "Maria"))
 }
