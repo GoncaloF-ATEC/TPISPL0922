@@ -9,14 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+        NavigationStack {
+            
+            VStack{
+                
+                NavigationLink {
+                    
+                    newView(nome: "Maria", foto: "foto1")
+                    
+                } label: {
+                    Text("Go to View 2")
+                }
+                
+                
+            } // main VStack
+            .navigationTitle("Home page")
+            .navigationBarTitleDisplayMode(.automatic)
+        } //NavigationStack
+        
+        
+    } // main view
 }
 
 
